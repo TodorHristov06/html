@@ -1,0 +1,196 @@
+/* Общи стилове за тялото на страницата */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #f4f4f4; /* Светъл фон за цялата страница */
+}
+
+/* Стилове за страничния панел */
+#sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    overflow-y: auto; /* Позволява скролиране, ако съдържанието е по-голямо от височината */
+}
+
+/* Стилове за профилната снимка */
+.profile-pic {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* Стилове за навигационните линкове */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none; /* Премахване на подчертаването */
+    color: #ffffff; /* Основен цвят на линковете */
+    padding: 10px; /* Плътност на линковете */
+    display: flex; /* Разпределение на иконите и текста */
+    align-items: center; /* Центриране на иконите и текста */
+    border-radius: 5px; /* Заоблени ъгли */
+    transition: background-color 0.3s; /* Плавен преход за фона */
+}
+
+/* Стил за ховър */
+nav ul li a:hover {
+    background-color: #34495e; /* Светъл фон при ховър */
+    color: #ffffff; /* Цветът на текста при ховър */
+}
+
+/* Стил за активен линк */
+nav ul li a.active {
+    background-color: #4caf50; /* Фон при активен линк */
+    color: white; /* Цветът на текста при активен линк */
+}
+
+/* Стилове за съдържанието на страницата */
+.content {
+    margin-left: 270px; /* Отместване за страничния панел */
+    padding: 20px;
+    flex-grow: 1; /* Оставете съдържанието да заема наличното пространство */
+    background-color: #ffffff; /* Бял фон за основната част */
+    border-radius: 8px; /* Заоблени ъгли на съдържанието */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Лека сянка */
+}
+
+/* Заглавия в основната част */
+h2 {
+    color: #2c3e50;
+}
+
+h3 {
+    color: #34495e;
+    margin-top: 20px; /* Разстояние над заглавието на секцията */
+    border-bottom: 2px solid #4caf50; /* Подчертаване на заглавието на секцията */
+    padding-bottom: 5px; /* Разстояние под заглавието */
+}
+
+/* Стилове за секциите на CV */
+.personal-info, .education, .experience, .contact {
+    margin-bottom: 20px; /* Разстояние между секциите */
+    background-color: #f9f9f9; /* Светъл фон за секциите */
+    border-radius: 8px; /* Заоблени ъгли */
+    padding: 15px; /* Вътрешно разстояние */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Лека сянка */
+}
+
+.education-item, .experience-item {
+    margin-bottom: 15px; /* Разстояние между елементите */
+}
+
+/* Стилове за списъците с отговорности */
+ul {
+    margin-top: 10px; /* Разстояние над списъка */
+    padding-left: 20px; /* Отместване на списъка */
+}
+
+ul li {
+    margin-bottom: 5px; /* Разстояние между елементите в списъка */
+}
+
+/* Стилове за футера */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Отзивчиви стилове */
+@media (max-width: 768px) {
+    #sidebar {
+        width: 200px;
+    }
+
+    .content {
+        margin-left: 220px;
+    }
+
+    footer {
+        position: relative;
+    }
+}
+
+/* Стилове за секцията с технически умения */
+.skills-section {
+    margin-top: 20px;
+}
+
+.skills-section h3 {
+    color: #2c3e50; /* Цвят на заглавието на секцията със скилове */
+    margin-bottom: 10px; /* Разстояние под заглавието */
+}
+
+.skill {
+    margin: 10px 0; /* Разстояние между различните скилове */
+}
+
+.skill span {
+    display: inline-block; /* За да можем да добавим разстояние между заглавието и лентата за напредък */
+    width: 100px; /* Ширина на текста */
+    color: #34495e; /* Цвят на текста */
+}
+
+.skill-bar {
+    background-color: #ecf0f1; /* Светъл фон на лентата за напредък */
+    border-radius: 5px; /* Заоблени ъгли */
+    height: 20px; /* Височина на лентата за напредък */
+    margin-top: 5px; /* Разстояние над лентата за напредък */
+    overflow: hidden; /* За да не излиза напредъкът извън границите */
+}
+
+.skill-progress {
+    background-color: #4caf50; /* Цвят на напредъка */
+    height: 100%; /* Напредъкът да запълва височината на лентата */
+    border-radius: 5px; /* Заоблени ъгли на напредъка */
+    transition: width 0.5s; /* Плавен преход при промяна на ширината */
+    text-align: center; /* Центриране на текста */
+    color: white; /* Цветът на текста */
+    font-weight: bold; /* Удебелен текст */
+}
+
+/* Стилове за секцията с контактите */
+.contact-container {
+    display: flex; /* Разположение в редица */
+    justify-content: space-around; /* Разпределение на боксовете */
+    margin-top: 20px; /* Разстояние от заглавието */
+}
+
+.contact-box {
+    background-color: #f9f9f9; /* Светъл фон за секцията с контакти */
+    border-radius: 8px; /* Заоблени ъгли */
+    padding: 20px; /* Вътрешно разстояние */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Лека сянка */
+    flex: 1; /* Заема равно пространство */
+    margin: 0 10px; /* Разстояние между боксовете */
+    text-align: center; /* Центриране на текста */
+}
+
+.contact-item {
+    display: flex; /* Разположение на иконите и текста в редица */
+    align-items: center; /* Центриране на иконите и текста */
+    margin-bottom: 10px; /* Разстояние между елементите */
+}
+
+.contact-item i {
+    margin-right: 10px; /* Разстояние между иконите и текста */
+    color: #4caf50; /* Цвят на иконите */
+}
+
