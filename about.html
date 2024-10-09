@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div id="sidebar-container"></div> <!-- Плейсхолдър за страничния панел -->
+    <div id="sidebar-container"></div> 
 
     <div class="content">
         <h2>About Me</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>"By day, I'm a fluffy, innocent-looking cat; by night, I’m... Batman! 
+            Fighting crime, chasing laser pointers, and knocking over everything on your desk. With nine lives to spare, 
+            I’ve mastered the art of stealth, naps, and dramatic entrances. When I’m not saving Gotham, you’ll find me plotting world domination from my cozy corner or demanding treats like the hero I am. Because let’s face it—I'm not the hero you deserve, but I’m the cat you’re stuck with. </p>
 
         <div class="skills-section">
             <h3>Technical Skills</h3>
@@ -49,10 +51,6 @@
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2024 Your Name</p>
-    </footer>
-
     <script src="script.js"></script>
     <script>
         fetch('sidebar.html')
@@ -60,15 +58,14 @@
             .then(data => {
                 document.getElementById('sidebar-container').innerHTML = data;
 
-                // Добавяне на активен клас на текущия линк
-                const currentPage = window.location.pathname.split("/").pop(); // Получаване на името на текущата страница
+                const currentPage = window.location.pathname.split("/").pop(); 
                 const links = document.querySelectorAll('nav ul li a');
 
                 links.forEach(link => {
                     if (link.getAttribute('href') === currentPage) {
-                        link.classList.add('active'); // Добавяне на клас 'active' на текущия линк
+                        link.classList.add('active'); 
                     } else {
-                        link.classList.remove('active'); // Премахване на 'active' класа от останалите линкове
+                        link.classList.remove('active'); 
                     }
                 });
             });
